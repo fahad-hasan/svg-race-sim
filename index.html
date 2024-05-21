@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year13 Karting Fastest Laps Race Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="moving-div" style="--speed: 49.346s;"><span>SOV</span></div>
+    <div class="moving-div" style="--speed: 46.63s;"><span>SAN</span></div>
+    <div class="moving-div" style="--speed: 45.122s;"><span>SUJ</span></div>
+    <div class="moving-div" style="--speed: 43.653s;"><span>WIL</span></div>
+    <div class="moving-div" style="--speed: 41.865s;"><span>MAR</span></div>
+    <div class="moving-div" style="--speed: 41.531s;"><span>LAR</span></div>
+    <div class="moving-div" style="--speed: 41.361s;"><span>SIR</span></div>
+    <div class="moving-div" style="--speed: 41.4s;"><span>PAT</span></div>
+    <div class="moving-div" style="--speed: 41.2s;"><span>KC</span></div>
+    <div class="moving-div" style="--speed: 40.736s;"><span>MIK</span></div>
+    <div class="moving-div" style="--speed: 40.181s;"><span>JOS</span></div>
+    <div class="moving-div" style="--speed: 39.970s;"><span>FAH</span></div>
+    <div class="moving-div" style="--speed: 39.256s;"><span>AYD</span></div>
+    <div class="moving-div" style="--speed: 38.886s;"><span>RAI</span></div>
+    <div class="moving-div" style="--speed: 38.668s;"><span>BRE</span></div>
+    <div class="moving-div" style="--speed: 38.607s;"><span>NAT</span></div>
+    <button id="restartButton">Restart Race</button>
+    <script type="text/javascript">
+        document.getElementById('restartButton').addEventListener('click', () => {
+            const movingDivs = document.querySelectorAll('.moving-div');
+            movingDivs.forEach(div => {
+            div.style.animation = 'none';
+            // Force reflow to restart the animation
+            div.offsetHeight;
+            div.style.animation = '';
+        });
+    });
+    </script>
+  </body>
+  
+</html>
